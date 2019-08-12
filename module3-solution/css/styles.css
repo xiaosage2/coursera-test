@@ -47,22 +47,27 @@ body {
 
 /* Home page */
 /************************************************/
+.menu-item {
+	 background-color: white;
+	 margin: 15px auto 15px;
+	/*margin: 0 auto 10px auto;*/
+}
 
+.menu-item .wrap{
+	background-color: #fcf3f2;
+	padding:10px; 
+}
 
-#heading {
+.heading {
 	font-size: 1.8em;
 	margin-top: 15px; 
 	margin-bottom: 30px;
 }
 
-#sub-title{
+.sub-title{
 	font-size: 1.2em;
 }
 
-.menu-item {
-	background-color: #fcf3f2;
-	margin: 15px auto 15px;
-}
 
 .menu-item-description{
 	text-align: left;
@@ -70,13 +75,17 @@ body {
 
 
 
+/* SMALL DEVICES ONLY */
+/* ***************************************** */
+/*@media (min-width: 768px) and (max-width: 991px) {
+	.menu-item:nth-child(3){
+		
 
 
+	}
 
 
-
-
-
+}*/
 
 
 /* EXTRA-SMALL DEVICES ONLY */
