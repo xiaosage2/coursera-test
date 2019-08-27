@@ -1,0 +1,13 @@
+
+<div class="menulist">
+
+    <ul>
+      <li ng-repeat='item in ctrl1.foundItems'>
+        <h3>{{item.name}}</h3>
+        <h4>short name: {{item.short_name}}</h4>
+        <p>description: {{item.description}}</p>
+        <button ng-click='ctrl1.onRemove({itemIndex: $index})'>Don't want this one!</button>
+        <div class="empty">{{ctrl1.message}}</div>
+      </li>
+    </ul>
+</div>
