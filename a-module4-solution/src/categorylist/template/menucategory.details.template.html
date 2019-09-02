@@ -1,0 +1,18 @@
+
+<ul>
+	<li ng-repeat="category in $ctrl.categories" class="col-lg-4">
+			<button ui-sref="items({short_name: category.short_name})">
+				{{category.name}}
+			</button>
+	</li>
+</ul>
+<!-- , categoryName:category.name -->
+
+
+<!-- <ul>
+  <li ng-repeat="item in $ctrl.items">
+    short name: {{ item.short_name }} <br>
+    category name: {{ item.name }}
+  </li>
+</ul> -->
+<!-- ui-sref="itemDetail({itemId: $index} -->
