@@ -1,13 +1,12 @@
 <div class="container">
   <h2> the registed information</h2>
-  <div class="ng-if='infoctrl.showerror == true'">
+  <div ng-if='infoctrl.showerror == true'>
     <span>Not Signed Up Yet.</span>
     <a ui-sref="public.signup">
        Sign up Now!
     </a>
   </div>
 
-  <!-- ng-if='infoctrl.showerror == true' -->
 
   <ul id="menuinfo" ng-if="infoctrl.showerror == false">
     <li>firstname: {{infoctrl.info.firstname}}</li>
