@@ -1,0 +1,27 @@
+<div class="container">
+  <h2> the registed information</h2>
+  <div ng-if="infoctrl.showerror == true">
+    <span>Not Signed Up Yet.</span>
+    <a ui-sref="public.signup">
+       Sign up Now!
+    </a>
+  </div>
+
+
+  <ul id="menuinfo" ng-if="infoctrl.showerror == false">
+    <li>firstname: {{infoctrl.info.firstname}}</li>
+    <li>lastname: {{infoctrl.info.lastname}}</li>
+    <li>email: {{infoctrl.info.email}}</li>
+    <li>phone number: {{infoctrl.info.phone}}</li>
+    <li>favorite dish: {{infoctrl.info.favorite}}:
+      {{infoctrl.info.favoritecategory.name}} </li>
+    <li>description: {{infoctrl.info.favoritecategory.description}}</li>
+    <br>
+    <div >
+      <img ng-src='{{infoctrl.ApiPath}}/images/{{infoctrl.info.favorite}}.jpg'
+      alt="{{infoctrl.info.favoritecategory.name}}">
+    </div>
+  </ul>
+
+
+</div>
