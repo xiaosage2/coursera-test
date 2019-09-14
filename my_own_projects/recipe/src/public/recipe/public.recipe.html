@@ -45,11 +45,16 @@
     </span>
     <br>
     <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ui-sref='public.recipemenu'>Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model='searchctrl.searchrecipe'
+    >
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click='searchctrl.submit(searchctrl.searchrecipe)'
+              ui-sref='public.recipemenu'>Search</button>
+
     </form>
+
   </nav>
 
 
+      <p>{{recipectrl.searchrecipe}}</p>
 
 </div>

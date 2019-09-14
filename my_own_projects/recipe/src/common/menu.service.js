@@ -9,16 +9,24 @@ MenuService.$inject = ['$http', 'ApiPath','Food2ForkApi'];
 function MenuService($http,ApiPath,Food2ForkApi) {
   var service = this;
   service.user = {};
+  service.searchrecipe = '';
 
   service.saveUser = function (user) {
     service.user = user;
     console.log('user saved');
     console.log('the user:', service.user);
-  }
+  };
 
   service.getUser = function () {
     return service.user;
-  }
+  };
+
+  service.saveSearch = function (searchrecipe) {
+    // console.log(searchrecipe);
+    service.searchrecipe = searchrecipe;
+    console.log('search item saved!');
+    console.log('the item is', service.searchrecipe);
+  };
 
   service.getCategories = function () {
     return $http.get(ApiPath + '/categories.json').then(function (response) {
