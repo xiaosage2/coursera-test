@@ -5,8 +5,8 @@ angular.module('common')
 .service('MenuService', MenuService);
 
 
-MenuService.$inject = ['$http', 'ApiPath','RecipePuppy'];
-function MenuService($http,ApiPath,RecipePuppy) {
+MenuService.$inject = ['$http', 'ApiPath'];
+function MenuService($http,ApiPath) {
   var service = this;
   service.user = {};
   service.puppyRecipe = '';
@@ -57,25 +57,12 @@ function MenuService($http,ApiPath,RecipePuppy) {
 
 
   service.searchRecipe = function (recipename) {
+    console.log("not working!");
     // var promise = $http.get(RecipePuppy +'?q=' + recipename);
     // return promise.then(function(response) {
     //   console.log(response.data);
     //   return response.data;
-    // }).catch(function (error) {
-    //   console.log(error);
-    // });
-    // $http.jsonp(RecipePuppy +'?q=' + recipename)
-    // .success(function (data,status,headers,config) {
-    //   console.log(data);
-    //   console.log(status);
-    // })
-    // .error(function (data,status,headers,config) {
-    //   console.log(data);
-    //   console.log(status);
-    // })
-
-
-  };
+  }
 
 }
 
