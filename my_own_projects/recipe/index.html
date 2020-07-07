@@ -27,22 +27,23 @@
             <a href="index.html"><h1>Restaurant</h1></a>
             <p>
             <img src="images/star-k-logo.png" alt="Kosher certification">
-            <span> From Fork2Food API</span>
+            <span>你好啊</span>
             </p>
           </div>
 
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-controls="collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="navbarToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-controls="collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="collapsable-nav">
             <ul id="nav-list" class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
+              <li class="nav-item aria-disabled="true"">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item" ui-sref-active="active">
-                <a class="nav-link" ui-sref='public.menu'>Menu</a>
+              <!-- ui-sref-active="active" -->
+              <li class="nav-item">
+                <a class="nav-link" ui-sref='public.menu' aria-disabled="true">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" ui-sref='public.myinfo' tabindex="-1" aria-disabled="true">MyInfo</a>
@@ -125,13 +126,15 @@
     <script src="src/public/myinfo/info.controller.js"></script>
 
     <!-- Recipe module -->
-    <script src="src/public/recipe/recipesearch.controller.js"></script>
+    <!-- <script src="src/public/recipe/recipesearch.controller.js"></script> -->
     <script src="src/public/recipe/recipemenu/recipeitems.component.js"></script>
     <script src="src/public/recipe/recipesearch/recipesearch.controller.js"></script>
     <!-- ADMIN SITE -->
 
     <!--Application files -->
+    <script src="script.js">
 
+    </script>
   </body>
 
 </html>

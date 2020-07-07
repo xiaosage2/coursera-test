@@ -58,7 +58,7 @@ function routeConfig ($stateProvider) {
     })
     .state('public.recipe',{
       url:'/recipe',
-      templateUrl:'src/public/recipe/public.recipe.html',
+      templateUrl:'src/public/recipe/recipesearch/public.recipe.html',
       controller:'SearchPreController as searchctrl'
     })
     .state('public.recipemenu',{
@@ -68,7 +68,7 @@ function routeConfig ($stateProvider) {
       resolve:{
         recipes:['MenuService',function (MenuService) {
           // console.log(MenuService.searchRecipe('Chinese'));
-          return MenuService.searchRecipe(MenuService.searchrecipe);
+          return MenuService.searchRecipe(MenuService.puppyRecipe);
         }]
       }
     });

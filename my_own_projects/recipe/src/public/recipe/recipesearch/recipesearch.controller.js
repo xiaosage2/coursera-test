@@ -12,7 +12,6 @@ function SearchPreController(MenuService) {
 
     searchctrl.submit = function (search) {
       MenuService.saveSearch(search);
-      // console.log(search);
     };
 }
 

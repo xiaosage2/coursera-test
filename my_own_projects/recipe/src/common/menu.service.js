@@ -5,11 +5,11 @@ angular.module('common')
 .service('MenuService', MenuService);
 
 
-MenuService.$inject = ['$http', 'ApiPath','Food2ForkApi'];
-function MenuService($http,ApiPath,Food2ForkApi) {
+MenuService.$inject = ['$http', 'ApiPath','RecipePuppy'];
+function MenuService($http,ApiPath,RecipePuppy) {
   var service = this;
   service.user = {};
-  service.searchrecipe = '';
+  service.puppyRecipe = '';
 
   service.saveUser = function (user) {
     service.user = user;
@@ -19,13 +19,6 @@ function MenuService($http,ApiPath,Food2ForkApi) {
 
   service.getUser = function () {
     return service.user;
-  };
-
-  service.saveSearch = function (searchrecipe) {
-    // console.log(searchrecipe);
-    service.searchrecipe = searchrecipe;
-    console.log('search item saved!');
-    console.log('the item is', service.searchrecipe);
   };
 
   service.getCategories = function () {
@@ -42,23 +35,46 @@ function MenuService($http,ApiPath,Food2ForkApi) {
     }
 
     return $http.get(ApiPath + '/menu_items.json', config).then(function (response) {
+      // console.log(response);
       return response.data;
     });
   };
 
 
   service.getFavoriteDish = function (shortname) {
-
     return $http.get(ApiPath + '/menu_items/' + shortname + '.json');
   };
 
+
+
+  service.saveSearch = function (puppyRecipe) {
+    console.log(puppyRecipe);
+    service.puppyRecipe = puppyRecipe;
+    console.log('search item saved!');
+    console.log('the item is', service.puppyRecipe);
+  };
+
+
+
   service.searchRecipe = function (recipename) {
-    var promise = $http.get(Food2ForkApi + recipename);
-    // var str = Food2ForkApi + recipename;
-    // console.log(str);
-    return promise.then(function(response) {
-      return response.data;
-    });
+    // var promise = $http.get(RecipePuppy +'?q=' + recipename);
+    // return promise.then(function(response) {
+    //   console.log(response.data);
+    //   return response.data;
+    // }).catch(function (error) {
+    //   console.log(error);
+    // });
+    // $http.jsonp(RecipePuppy +'?q=' + recipename)
+    // .success(function (data,status,headers,config) {
+    //   console.log(data);
+    //   console.log(status);
+    // })
+    // .error(function (data,status,headers,config) {
+    //   console.log(data);
+    //   console.log(status);
+    // })
+
+
   };
 
 }

@@ -4,8 +4,8 @@
 angular.module('public')
 .controller('SignupController',SignupController);
 
-SignupController.$inject = ['MenuService'];
-function SignupController(MenuService) {
+SignupController.$inject = ['MenuService','$state'];
+function SignupController(MenuService,$state) {
   var signctrl = this;
 
   signctrl.user = {};
@@ -20,6 +20,7 @@ function SignupController(MenuService) {
       // console.log("response.data",signctrl.user.favoritecategory);
       MenuService.saveUser(signctrl.user);
       signctrl.user.show = true;
+      $state.go('public.myinfo');
     }, function (error) {
       console.log(error);
       signctrl.user.showerror = true;
