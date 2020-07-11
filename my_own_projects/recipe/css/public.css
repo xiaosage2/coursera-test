@@ -62,6 +62,7 @@
 }
 #menu-tile span, #specials-tile span, #map-tile span {
   position: absolute;
+  /* 设置了absolute相当于隐式的设置了display：inline-block */
   bottom: 0;
   right: 0;
   width: 100%;
@@ -184,8 +185,8 @@ h3.menu-item-title {
   /* Home Page */
   .container .jumbotron {
     /* background: url('../images/jumbotron_768.jpg') no-repeat;
-    height: 432px; */
-    margin-top: 30px;
+    height: 432px;
+    margin-top: 30px; */
     padding: 0;
   }
   #menu-tile, #specials-tile {

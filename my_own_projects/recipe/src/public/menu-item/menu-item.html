@@ -1,36 +1,32 @@
-<!-- <div class="row"> -->
-  <!-- <div class="menu-item-tile col-md-6"> -->
-    <div class="row">
-      <div class="col-sm-5">
-        <div class="menu-item-photo">
-          <div>{{$ctrl.menuItem.short_name}}</div>
-          <img class="img-responsive" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menuItem.short_name}}.jpg" alt="{{$ctrl.menuItem.name}}">
-        <div class="menu-item-price">{{$ctrl.menuItem.price_small | currency}}<span> {{$ctrl.menuItem.small_portion_name}}</span> {{$ctrl.menuItem.price_large | currency}} <span>{{$ctrl.menuItem.large_portion_name}}</span></div>
-        </div>
-      </div>
-      <div class="menu-item-description col-sm-7">
-        <h3 class="menu-item-title">{{$ctrl.menuItem.name}}</h3>
-        <p class="menu-item-details">{{$ctrl.menuItem.description}}</p>
-      </div>
+<div class="row">
+  <div class="col-sm-5">
+    <div class="menu-item-photo">
+      <div>{{$ctrl.menuItem.short_name}}</div>
+      <img class="img-fluid" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menuItem.short_name}}.jpg" alt="{{$ctrl.menuItem.name}}">
     </div>
-
-    <hr class="d-block d-sm-none">
-  <!-- </div> -->
-<!-- </div> -->
-<!-- " | currency" is the filter in angualr -->
-
-
-
+    <div class="menu-item-price">{{$ctrl.menuItem.price_small | currency}}<span> {{$ctrl.menuItem.small_portion_name}}</span> {{$ctrl.menuItem.price_large | currency}} <span>{{$ctrl.menuItem.large_portion_name}}</span></div>
+  </div>
+  <div class="menu-item-description col-sm-7">
+    <h3 class="menu-item-title">{{$ctrl.menuItem.name}}</h3>
+    <p class="menu-item-details">{{$ctrl.menuItem.description}}</p>
+  </div>
+</div>
+<hr class="d-block d-sm-none">
 
 
 
 <!-- <div class="row">
-  <div class="col-8 bg-warning">
-    .col-8
-    <div class="row">
-      <div class="col-6 bg-light">.col-6</div>
-      <div class="col-6 bg-secondary">.col-6</div>
+  <div class="col-sm-5">
+    <div class="menu-item-photo">
+      <div>{{$ctrl.menuItem.short_name}}</div>
+      <img class="img-responsive" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menuItem.short_name}}.jpg" alt="{{$ctrl.menuItem.name}}">
+    <div class="menu-item-price">{{$ctrl.menuItem.price_small | currency}}<span> {{$ctrl.menuItem.small_portion_name}}</span> {{$ctrl.menuItem.price_large | currency}} <span>{{$ctrl.menuItem.large_portion_name}}</span></div>
     </div>
   </div>
-  <div class="col-4 bg-success">.col-4</div>
-</div> -->
+  <div class="menu-item-description col-sm-7">
+    <h3 class="menu-item-title">{{$ctrl.menuItem.name}}</h3>
+    <p class="menu-item-details">{{$ctrl.menuItem.description}}</p>
+  </div>
+</div>
+
+<hr class="d-block d-sm-none"> -->

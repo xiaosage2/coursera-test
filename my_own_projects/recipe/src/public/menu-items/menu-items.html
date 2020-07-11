@@ -1,5 +1,3 @@
-
-<!-- <div class="container-fluid"> -->
 <div class="container">
   <h2 id="menu-categories-title" class="text-center">
     {{ menuItemsCtrl.menuItems.category.name}} Menu
@@ -7,8 +5,9 @@
   <div class="text-center">
     {{ menuItemsCtrl.menuItems.category.special_instructions}}
   </div>
-  <!-- <div class="row"> -->
-  <menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem"></menu-item>
-  <!-- </div> -->
+
+  <section class="row">
+    <menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="menu-item-tile col-lg-6"></menu-item>
+  </section>
 
 </div>

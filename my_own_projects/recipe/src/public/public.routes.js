@@ -32,6 +32,7 @@ function routeConfig ($stateProvider) {
     })
     .state('public.menuitems', {
       url: '/menu/{category}',
+      //url: '/menu/:category'
       templateUrl: 'src/public/menu-items/menu-items.html',
       controller: 'MenuItemsController',
       controllerAs: 'menuItemsCtrl',
